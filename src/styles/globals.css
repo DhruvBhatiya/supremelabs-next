@@ -1,0 +1,291 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  /* color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb)); */
+
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+/* Style for the checkbox */
+/* Style for the checkbox */
+.react-responsive-modal-closeButton {
+  display: none !important;
+}
+
+.react-responsive-modal-modal {
+  border-radius: 8px !important;
+}
+
+.modal-root {
+  min-width: 460px;
+}
+
+input[type="checkbox"] {
+  /* Hide the default checkbox */
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  /* Define a custom size for the checkbox */
+  width: 18px;
+  height: 18px;
+  /* Add your desired background color */
+  background-color: transparent;
+  /* Add border-radius for a rounded shape */
+  border-radius: 4px;
+  /* Add some padding or margin for spacing */
+  margin: 5px;
+  /* Add border and box-shadow for a better visual */
+  border: 1px solid #89225a;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  /* Position relative for pseudo-element */
+  position: relative;
+}
+
+/* Style for the label */
+label {
+  /* Add some margin for spacing */
+  margin-left: 10px;
+}
+
+/* Change the appearance of the checkbox when checked */
+input[type="checkbox"]:checked {
+  /* Change the background color when checked */
+  background-color: #89225a;
+  /* You can also change other styles when checked */
+  /* For example, change the border color */
+  border-color: #89225a;
+}
+
+/* Style for the checkmark */
+input[type="checkbox"]::before {
+  content: "";
+  position: absolute;
+  top: 2.5px;
+  left: 5.5px;
+  width: 5px;
+  height: 10px;
+  border: solid #fff;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+  opacity: 0;
+  /* Initially hidden */
+}
+
+/* Show the checkmark when the checkbox is checked */
+input[type="checkbox"]:checked::before {
+  opacity: 1;
+}
+
+.margin-modal {}
+
+@media screen and (min-width: 1050px) and (max-width: 1420px) {
+  .margin-modal {
+    margin-top: 210px;
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (min-width: 1420px) and (max-width: 1439px) {
+  .margin-modal {
+    margin-top: 150px;
+    margin-bottom: 10px;
+  }
+}
+
+.flg-select button {
+  width: auto;
+  font-size: 16px;
+  height: 36px;
+  /* width: 51px; */
+  padding-left: 1px;
+  padding-right: 7px;
+  position: absolute;
+  top: -46px;
+  left: 14px;
+  border: unset;
+  background-color: #e5e7eb;
+}
+
+.herosection-bg {
+  border-bottom: 1px solid var(--Gray-Gray-200, #e5e7eb);
+  background: linear-gradient(0deg,
+      var(--Black-Black-07, rgba(0, 0, 0, 0.1)) 0%,
+      var(--Black-Black-07, rgba(0, 0, 0, 0.1)) 100%),
+    var(--White-White-01, #fff);
+}
+
+.banner {
+  height: 650px;
+}
+
+.banner-content p:first-child {
+  border: 1px solid black;
+  border: 1px solid #89225a;
+}
+
+.banner-content h1 {
+  font-size: 40px;
+  line-height: 48px;
+  font-weight: 600;
+}
+
+.banner-inner {
+  width: 1270px;
+  padding: 0 15px;
+  position: relative;
+  height: 650px;
+}
+
+.banner-content {
+  width: 355px;
+  position: absolute;
+  left: 40px;
+  top: 100px;
+  z-index: 1;
+}
+
+.banner-img {
+  position: absolute;
+  top: 0;
+}
+
+.banner-form {
+  width: 400px;
+  position: absolute;
+  top: 0;
+  right: 30px;
+}
+
+.banner-form h3 {
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.arrow-border {
+  border: 1px solid #e5e7eb;
+  border-radius: 130px;
+  padding: 4px 4px 4px 5px;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.grediant-border {
+  background: linear-gradient(180deg,
+      rgba(137, 34, 90, 0.01) -3.92%,
+      #89225a 52.37%,
+      #fb7cc1 100%);
+  border-radius: 8px;
+}
+
+.grediant-border .inner-div {
+  border-radius: 8px;
+}
+
+.bg-section-image {
+  background-image: url(../assets/images/bg3.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.bg-book-image, .bg-why-choose,.bg-case-study{
+  background-image: url(../assets/images/low_vision_bg_design.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.footer-bg{
+  background-image: url(../assets/images/bg-footer.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.testimonial-box:hover {
+  background-color: #DFF3FB;
+}
+
+.bg-counter-image {
+  background-image: url(../assets/images/counter.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+
+.bg-test-image {
+  background-image: url(../assets/images/testBG.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+
+.bg4 {
+  background-image: url(../assets/images/bg4.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.bg5 {
+  background-image: url(../assets/images/bg5.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.bg6 {
+  background-image: url(../assets/images/bg6.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.book-test-hero{
+  background-image: url(../assets/images/book-test-hero-bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.contact-hero-sec {
+  background-image: url(../assets/images/contactus/contactus-hero-bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+
+.contact-sec{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 15px;
+}
+.box-shadow-menu{
+  box-shadow: 4px 4px 24px 0px #00000066;
+
+}
+
+.desktop-banner{
+  background-image: url(../assets/images/health.jpg);
+  height: 500px;
+  width: 100%;
+  /* background-repeat: no-repeat; */
+  background-size: cover;
+}
